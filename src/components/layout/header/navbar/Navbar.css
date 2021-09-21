@@ -1,0 +1,38 @@
+.navbar__wrapper {
+  display: flex;
+  padding: 0px 20px;
+  height: 65px;
+//justify-content: space-around;
+}
+
+.navbar__box {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__box--logo {
+  //margin-right: 40px;
+  flex: 1;
+}
+
+.navbar__box--list {
+  flex: 2;
+}
+
+.menu-list__item {
+  margin-right: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+  color: #3D3D3F;
+  text-decoration: none;
+}
+
+.menu-list__item:hover {
+  color: #F35F2F;
+}
+
+.logo {
+  width: 40px;
+}

@@ -1,0 +1,18 @@
+* {
+  font-family: 'DM Sans', sans-serif;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  background: #F35F2F;
+  opacity: 0.85;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background: linear-gradient(2.79deg, #F35F2F -13.68%, rgba(243, 95, 47, 0.75) 121.16%);
+}
