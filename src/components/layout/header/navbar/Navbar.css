@@ -25,14 +25,14 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 18px;
-  color: #3D3D3F;
+  color: #FFFF;
   text-decoration: none;
 }
 
 .menu-list__item:hover {
-  color: #F35F2F;
+  color: #b40404;
 }
 
 .logo {
-  width: 40px;
+  width: 100px;
 }
