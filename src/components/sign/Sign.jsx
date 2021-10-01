@@ -13,7 +13,7 @@ const Sign = () => {
         const {user} = await auth.signInWithPopup(provider);
     }
     return (
-        <div class="login">
+        <div className="login">
             <div className="login__wrapper">
                 <div className="login__box login__box--logo">
                     <NavLink to={HOME_ROUTE}>

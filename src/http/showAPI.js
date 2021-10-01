@@ -1,7 +1,7 @@
 import {$host} from "./index";
 
 export const fetchShows = async () => {
-    const {data} = await $host.get('shows');
+    const {data} = await $host.get('shows', {params: 'page=5'});
     return data;
 }
 

@@ -3,10 +3,8 @@ import logo from '../../../../assets/logo.svg'
 import './Navbar.css'
 import {NavLink} from "react-router-dom";
 import {
-    EPISODES_ROUTE,
     HOME_ROUTE,
-    PEOPLE_ROUTE, PROFILE_ROUTE,
-    SCHEDULE_ROUTE,
+    PROFILE_ROUTE,
     SHOWS_ROUTE, SIGN_ROUTE,
 } from "../../../../utils/consts";
 import {Context} from "../../../../index";
@@ -16,12 +14,8 @@ const Navbar = () => {
     const {auth} = useContext(Context);
     const [user] = useAuthState(auth);
 
-    const abs = 'abs';
-
-    console.log('user:', user)
-
     return (
-        <div class="navbar">
+        <div className="navbar">
             <div className="navbar__wrapper wrapper">
                 <div className="navbar__box navbar__box--logo">
                     <div className="navbar__logo">
@@ -33,10 +27,8 @@ const Navbar = () => {
                 <div className="navbar__box navbar__box--list">
                     <nav className="navbar__list menu-list">
                         <NavLink to={HOME_ROUTE} className="menu-list__item">Home</NavLink>
-                        <NavLink to={SCHEDULE_ROUTE} className="menu-list__item">Schedule</NavLink>
                         <NavLink to={SHOWS_ROUTE} className="menu-list__item">Shows</NavLink>
-                        <NavLink to={EPISODES_ROUTE} className="menu-list__item">Episodes</NavLink>
-                        <NavLink to={PEOPLE_ROUTE} className="menu-list__item">People</NavLink>
+                        {user && <NavLink to={PROFILE_ROUTE} className="menu-list__item">Profile</NavLink>}
                     </nav>
                 </div>
                 <div className="navbar__box navbar__box--actions">
@@ -63,14 +55,12 @@ const Navbar = () => {
                             </div>
                         </div>
                         :
-                            <NavLink to={SIGN_ROUTE}>
-                                <button className="navbar__button button" type="button">Log in</button>
-                            </NavLink>
+                        <NavLink to={SIGN_ROUTE}>
+                            <button className="navbar__button button" type="button">Log in</button>
+                        </NavLink>
                     }
-
                 </div>
             </div>
-
         </div>
     );
 };
